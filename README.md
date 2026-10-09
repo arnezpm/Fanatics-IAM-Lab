@@ -5,7 +5,9 @@ Hands-on Identity Security and IAM portfolio demonstrating **enterprise access a
 **Certification-aligned coverage:** `CompTIA Security+` · `Microsoft SC-300` · `Okta Professional`  
 **Portfolio platforms:** `Active Directory` · `Microsoft Entra` · `Hybrid Identity` · `Okta` · `PowerShell` · `Microsoft Graph`
 
+
 > **Evidence-first portfolio:** Skills listed below link directly to the case-study section where the capability is demonstrated, tested, or troubleshot.
+
 
 ## Skills & Evidence
 
