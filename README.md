@@ -1,32 +1,66 @@
-# Fanatics IAM Lab
+# Identity Security / IAM Portfolio
 
-Enterprise-style **Identity & Access Management / Identity Security home lab** focused on building practical experience across Active Directory, Microsoft Entra ID, hybrid identity, identity governance, authentication, privileged access, SSO, automation, and security control assurance.
+Hands-on Identity Security and IAM portfolio demonstrating **enterprise access administration, authentication, authorization, RBAC, least privilege, troubleshooting, identity governance, and security-control validation**.
 
-> **Portfolio disclaimer:** This is a fictional cybersecurity/IAM learning environment created for portfolio demonstration. It is not affiliated with, endorsed by, or representative of Fanatics or any employer. All organizational structures, named stakeholders, business processes, requests, approvals, incidents, and scenarios are fictional or simulated. Technical evidence is generated within a personal home lab. No employer systems, credentials, confidential information, or production data are used.
+**Certification-aligned coverage:** `CompTIA Security+` · `Microsoft SC-300` · `Okta Professional`  
+**Portfolio platforms:** `Active Directory` · `Microsoft Entra` · `Hybrid Identity` · `Okta` · `PowerShell` · `Microsoft Graph`
 
-## Portfolio Objective
+> **Evidence-first portfolio:** Skills listed below link directly to the case-study section where the capability is demonstrated, tested, or troubleshot.
 
-This repository is designed to demonstrate IAM work as it occurs in an enterprise environment rather than as a collection of disconnected technical exercises.
+## Skills & Evidence
 
-Technical implementations are tied to realistic:
+| Skill / Technology | Demonstrated capability | Evidence |
+|---|---|---|
+| **Active Directory users, groups & roles** | Managed user identities, security groups, role membership, and nested access groups. | [Case 001 → Identity & Role Administration](03-Case-Studies/001-IT-Support-Role/README.md#evidence-ad-identity-admin) |
+| **RBAC** | Translated a business role into a controlled role → entitlement → permission model | [Case 001 → RBAC & Entitlement Design](03-Case-Studies/001-IT-Support-Role/README.md#evidence-rbac) |
+| **Password reset / delegated administration** | Implemented scoped password-reset authority without granting broad AD administration | [Case 001 → Delegated Password Reset](03-Case-Studies/001-IT-Support-Role/README.md#evidence-password-reset) |
+| **Least privilege** | Defined explicit administrative exclusions and constrained support access to required capabilities | [Case 001 → Least-Privilege Boundary](03-Case-Studies/001-IT-Support-Role/README.md#evidence-least-privilege) |
+| **Authorization testing** | Performed positive, negative, and privileged-boundary access tests from a non-admin operator context | [Case 001 → Authorization Testing](03-Case-Studies/001-IT-Support-Role/README.md#evidence-authorization-testing) |
+| **ACL inheritance / effective scope** | Identified inherited delegation that unintentionally extended into a privileged identity population | [Case 001 → ACL Inheritance Finding](03-Case-Studies/001-IT-Support-Role/README.md#evidence-acl-inheritance) |
+| **Privileged access boundaries** | Separated privileged identities from the standard workforce delegation hierarchy and retested access | [Case 001 → Privileged Identity Remediation](03-Case-Studies/001-IT-Support-Role/README.md#evidence-privileged-boundary) |
+| **IAM troubleshooting & evidence assurance** | Rejected an ambiguous authorization test method, rebuilt the test context, and repeated validation correctly | [Case 001 → Troubleshooting & Test Assurance](03-Case-Studies/001-IT-Support-Role/README.md#evidence-troubleshooting) |
+| **PowerShell-assisted validation** | Used PowerShell alongside GUI administration to verify Active Directory access-control state | [Case 001 → Technical Validation](03-Case-Studies/001-IT-Support-Role/README.md#evidence-powershell) |
 
-- business requirements;
-- identity roles and entitlements;
-- least-privilege decisions;
-- approval and governance processes;
-- troubleshooting scenarios;
-- positive and negative authorization tests;
-- security findings and remediation;
-- lifecycle reviews;
-- control testing;
-- operational runbooks;
-- audit/evidence requirements.
+> **Current evidence:** Case 001 provides completed hands-on evidence for the skills above. Microsoft Entra, hybrid identity, authentication, SSO, PIM, PKI, Microsoft Graph, and Okta scenarios are being added through subsequent case studies.
 
-The portfolio role is **IAM Analyst within Cybersecurity**. Lab administrator capability is intentionally distinguished from the authority an IAM Analyst would realistically have in production.
+## Case Studies
 
-## Learning and Validation Methodology
+| Case Study | What it demonstrates | Technology | Core skills |
+|---|---|---|---|
+| **[001 — IT Support RBAC & Delegated Password Reset](03-Case-Studies/001-IT-Support-Role/README.md)** | Standardized IT Support password-reset access, discovered excessive inherited privileged scope, redesigned the authorization boundary, and validated the remediation | Active Directory, ADUC/RSAT, Windows 11, PowerShell | RBAC, delegated administration, least privilege, ACL inheritance, privileged access, authorization testing |
 
-Major IAM capabilities are developed using the following lifecycle:
+## Technology Coverage
+
+**Current hands-on evidence:**  
+`Active Directory Domain Services` · `ADUC / RSAT` · `Windows 11 Domain Member` · `PowerShell` · `DNS dependencies`
+
+**Portfolio expansion:**  
+`Microsoft Entra ID` · `MFA` · `SSPR` · `Conditional Access` · `Identity Protection` · `Hybrid Identity` · `PIM` · `Access Reviews` · `SAML/OIDC` · `SCIM` · `Microsoft Graph` · `PKI` · `Okta`
+
+## Certification & Security Alignment
+
+### Certification-aligned knowledge
+
+`CompTIA Security+` · `Microsoft SC-300` · `Okta Professional`
+
+Case studies connect hands-on technical work to the identity, authentication, authorization, troubleshooting, governance, automation, and security concepts commonly evaluated in these certification domains.
+
+### Security frameworks & principles
+
+`NIST CSF 2.0` · `NIST SP 800-53` · `ISO/IEC 27001/27002` · `Zero Trust`
+
+Framework mappings are used where they materially explain **why a control matters**, what security property is at risk, and how a remediation improves the control environment.
+
+## About This Portfolio
+
+This repository models an evolving fictional enterprise IAM program rather than a collection of isolated configuration exercises.
+
+Each major case begins with a realistic business or security requirement and follows the work through authorization design, implementation, testing, pressure testing, troubleshooting, remediation, evidence, and lifecycle considerations.
+
+The portfolio role is **IAM Analyst within Cybersecurity**. Technical capability demonstrated in the home lab is intentionally distinguished from production authority: business owners approve business need, security and resource owners participate where appropriate, and deeper platform changes may belong to engineering or infrastructure teams.
+
+<details>
+<summary><strong>How cases are developed and validated</strong></summary>
 
 ```text
 Learn
@@ -49,71 +83,21 @@ Prove
   ↓
 Harden
   ↓
-Map to Security Standards
+Map to Security Knowledge & Standards
   ↓
 Document
   ↓
 Lessons Learned / Post-Implementation Review
 ```
 
-A capability is not treated as fully covered simply because it was configured successfully.
+A capability is not treated as fully covered simply because a feature was configured successfully.
 
-The goal is to be able to:
+The objective is to understand why the control exists, identify its security boundary, test intended and unintended behavior, diagnose failures using evidence, explain business/security impact, remediate root cause, prove the remediation, and identify preventive improvements.
 
-- explain why the control exists;
-- configure it;
-- identify its trust and authorization boundaries;
-- test intended and unintended behavior;
-- pressure-test assumptions;
-- troubleshoot failures using evidence;
-- explain the security impact of a failure;
-- distinguish mitigation from root-cause remediation;
-- prove remediation worked;
-- identify preventive hardening opportunities;
-- relate the issue to realistic business risk;
-- map the concept to applicable security frameworks and certification domains.
+</details>
 
-## Security and Standards Alignment
-
-Where relevant, cases are analyzed against concepts from:
-
-- **NIST Cybersecurity Framework 2.0**
-- **NIST SP 800-53**
-- **ISO/IEC 27001 / 27002**
-- **Zero Trust**
-- **Microsoft SC-300**
-- **CompTIA Security+**
-- **Microsoft identity security guidance**
-- **Okta identity concepts**, as the environment expands
-
-Mappings are included only where they materially apply to the scenario rather than being added as decorative compliance references.
-
-## Technology Roadmap
-
-Current and planned technologies include:
-
-- Active Directory Domain Services
-- Microsoft Entra ID
-- Hybrid identity and directory synchronization
-- MFA and authentication methods
-- Self-Service Password Reset
-- Conditional Access
-- Identity Protection
-- Privileged Identity Management
-- Access Reviews
-- Enterprise Applications
-- SAML
-- OpenID Connect / OAuth
-- SCIM provisioning
-- Microsoft Graph
-- PowerShell automation
-- Service accounts and workload identities
-- PKI and certificate lifecycle
-- DNS and identity-related network dependencies
-- ITSM / ServiceNow-style workflows
-- Okta
-
-## Repository Structure
+<details>
+<summary><strong>Repository structure</strong></summary>
 
 ```text
 01-Organization/
@@ -129,164 +113,38 @@ Current and planned technologies include:
 11-Control-Assurance-and-Risk/
 ```
 
-### Governance
+Reusable artifacts are promoted out of individual cases:
 
-`02-IAM-Governance` contains reusable IAM governance artifacts such as:
+- Roles → Role Catalog
+- Entitlements → Entitlement Catalog
+- Architecture decisions → ADRs
+- Repeated procedures → Runbooks
+- Control tests → Control Assurance
+- Technical proof → Evidence
+- Automation → Technical Implementation
 
-- role definitions;
-- entitlement definitions;
-- role-to-entitlement matrices;
-- naming standards;
-- access standards;
-- approval and decision records;
-- segregation-of-duties concepts.
+</details>
 
-### Case Studies
+## Portfolio Roadmap
 
-`03-Case-Studies` contains end-to-end IAM scenarios following the general chain:
+Planned case-study coverage includes:
 
-```text
-Business Trigger
-      ↓
-Discovery
-      ↓
-Requirements
-      ↓
-Role / Entitlement Definition
-      ↓
-Least-Privilege Analysis
-      ↓
-Approval
-      ↓
-Technical Design
-      ↓
-Implementation
-      ↓
-Pressure Testing
-      ↓
-Authorization Testing
-      ↓
-Finding / Remediation
-      ↓
-Evidence
-      ↓
-Closure
-      ↓
-Lifecycle Review
-```
+| Area | Planned scenarios |
+|---|---|
+| **Identity lifecycle** | Joiner provisioning, mover access changes, leaver remediation |
+| **Authentication** | MFA enrollment/troubleshooting, SSPR, authentication methods |
+| **Entra operations** | Sign-in log investigation, Conditional Access troubleshooting, Identity Protection |
+| **Hybrid identity** | AD ↔ Entra synchronization and identity troubleshooting |
+| **Governance** | Access Reviews, entitlement review, PIM |
+| **Application IAM** | Enterprise Applications, SAML/OIDC SSO, application assignment |
+| **PKI** | Certificate lifecycle and renewal troubleshooting |
+| **Automation** | PowerShell and Microsoft Graph reporting/workflows |
+| **Okta** | Authentication, application access, lifecycle, and cross-platform identity comparison |
 
-### Evidence and Control Assurance
+## Disclaimer
 
-Technical evidence is distinguished from simulated business artifacts.
+This is a fictional cybersecurity/IAM home-lab portfolio created for learning and professional demonstration.
 
-When practical, system behavior is generated and tested directly in the lab rather than represented synthetically.
+The lab environment is **not affiliated with, endorsed by, or representative of Fanatics or any employer**. All organizational structures, stakeholders, approvals, incidents, workflows, and business scenarios are fictional or simulated. Technical evidence is generated in a personal lab environment.
 
-Simulated artifacts may include:
-
-- ITSM tickets;
-- business approvals;
-- discovery meetings;
-- change records;
-- incident narratives;
-- stakeholder communications.
-
-Technical validation may include:
-
-- authorization results;
-- effective permissions;
-- ACL inspection;
-- sign-in logs;
-- PowerShell/Graph output;
-- configuration state;
-- troubleshooting evidence.
-
-## Case Study 001 — IT Support Analyst Access Standardization
-
-**Case:** `IAM-2026-0047`
-
-The first completed case establishes delegated password-reset access for an IT Support Analyst role using Active Directory RBAC and least privilege.
-
-The initial implementation successfully provided standard-user password resets, but pressure testing identified that the original OU structure caused the delegation to inherit into a privileged identity population.
-
-The case then follows:
-
-```text
-Business requirement
-    ↓
-RBAC design
-    ↓
-Delegated password reset
-    ↓
-Positive test
-    ↓
-Negative authorization test
-    ↓
-Privileged-scope pressure test
-    ↓
-Control finding
-    ↓
-Root-cause analysis
-    ↓
-Privileged OU separation
-    ↓
-Retest
-    ↓
-Hardening
-    ↓
-Control/framework mapping
-```
-
-Final testing demonstrated that the delegated operator could:
-
-- **reset a standard user's password** — allowed;
-- **modify that user's group membership** — denied;
-- **reset a privileged user's password** — denied.
-
-The case also documents a test-method assurance issue where preliminary `/netonly` testing was rejected because the execution context was not sufficiently reliable to serve as final authorization evidence.
-
-See:
-
-`03-Case-Studies/001-IT-Support-Role/`
-
-## Planned Case Studies
-
-Future scenarios are expected to include:
-
-- Joiner provisioning
-- Mover / role-change access
-- Leaver remediation
-- Access certification
-- MFA and SSPR support
-- Entra sign-in investigation
-- Conditional Access troubleshooting
-- Hybrid identity synchronization incidents
-- SAML/OIDC SSO troubleshooting
-- Risky sign-in response
-- PIM and privileged-access workflows
-- SaaS application onboarding
-- PKI / certificate lifecycle incidents
-- Microsoft Graph and PowerShell automation
-- Okta identity administration and cross-platform comparison
-
-## Portfolio Philosophy
-
-The objective is not to demonstrate that every implementation was perfect on the first attempt.
-
-Findings, failed assumptions, misconfigurations, excessive access, troubleshooting paths, and design corrections are intentionally preserved when they improve the learning value of a case.
-
-A strong case should be able to answer:
-
-**What was needed?**  
-**Why was the control necessary?**  
-**What could go wrong?**  
-**How was it tested?**  
-**What failed?**  
-**Why was that failure a security issue?**  
-**How was risk mitigated?**  
-**What fixed the root cause?**  
-**How was the fix proven?**  
-**What was hardened afterward?**  
-**Which security principles or standards apply?**  
-**What would be done differently next time?**
-
-That process is the core of this portfolio.
+No employer systems, production credentials, confidential information, or proprietary data are used.
