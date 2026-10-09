@@ -55,7 +55,8 @@ Framework mappings are used where they materially explain **why a control matter
 
 ## About This Portfolio
 
-This repository models an evolving fictional enterprise IAM program rather than a collection of isolated configuration exercises.
+This repository models an **evolving fictional enterprise IAM program** rather than a collection of isolated configuration exercises.
+I will continue updating and expanding the enterprise daily. 
 
 Each major case begins with a realistic business or security requirement and follows the work through authorization design, implementation, testing, pressure testing, troubleshooting, remediation, evidence, and lifecycle considerations.
 
@@ -147,6 +148,4 @@ Planned case-study coverage includes:
 
 This is a fictional cybersecurity/IAM home-lab portfolio created for learning and professional demonstration.
 
-The lab environment is **not affiliated with, endorsed by, or representative of Fanatics or any employer**. All organizational structures, stakeholders, approvals, incidents, workflows, and business scenarios are fictional or simulated. Technical evidence is generated in a personal lab environment.
-
-No employer systems, production credentials, confidential information, or proprietary data are used.
+The lab environment is **not affiliated with, endorsed by, or representative of Fanatics or any employer**. All organizational structures, stakeholders, approvals, incidents, workflows, and business scenarios are fictional or simulated. No employer systems, production credentials, confidential information, or proprietary data are used.
